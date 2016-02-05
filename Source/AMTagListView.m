@@ -186,9 +186,10 @@
     };
 
     if (self.tagAlignment == AMTagAlignmentRight) {
-        for (AMTagView *obj in self.tags) {
-            obj.frame = CGRectMake(self.frame.size.width - obj.frame.origin.x - obj.frame.size.width, obj.frame.origin.y, obj.frame.size.width, obj.frame.size.height);
+        for (AMTagView *obj in self.tags)
+        { obj.frame = CGRectMake(self.frame.size.width - obj.frame.origin.x - obj.frame.size.width, self.frame.size.height - obj.frame.origin.y - obj.frame.size.height, obj.frame.size.width, obj.frame.size.height);
         }
+        
     }
 
     [self setContentSize:CGSizeMake(self.frame.size.width, maxY + size.height + self.marginY)];
