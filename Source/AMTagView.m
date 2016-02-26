@@ -17,7 +17,8 @@
 #define kDefaultRadius			8
 #define kDefaultTextColor		[UIColor whiteColor]
 #define kDefaultFont			[UIFont systemFontOfSize:14]
-#define kDefaultTagColor		[UIColor redColor]
+#define kDefaultTagColor		[[UIColor colorWithRed:235.0f/255.0f green:190.0f/255.0f blue:33.0f/255.0f alpha:0.5f/255.0f]colorWithAlphaComponent:1.0f]
+
 #define kDefaultInnerTagColor	[UIColor colorWithWhite:1 alpha:0.3]
 #define kDefaultImagePadding	3
 
