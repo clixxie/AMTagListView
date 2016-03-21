@@ -33,6 +33,7 @@ NSString * const AMTagViewNotification = @"AMTagViewNotification";
 @end
 
 @implementation AMTagView
+int controll = 0;
 
 #pragma mark - NSObject
 
@@ -240,9 +241,45 @@ NSString * const AMTagViewNotification = @"AMTagViewNotification";
 }
 
 - (void)setTagColor:(UIColor *)tagColor {
-    _tagColor = tagColor;
+    
+    if (controll == 0) {
+        
+        _tagColor = [[UIColor colorWithRed:146.0f/255.0f green:168.0f/255.0f blue:209.0f/255.0f alpha:0.5f/255.0f]colorWithAlphaComponent:1.0f];
+        
+        controll++;
+    }
+    else if (controll == 1){
+        
+        _tagColor = [[UIColor colorWithRed:182.0f/255.0f green:186.0f/255.0f blue:153.0f/255.0f alpha:0.5f/255.0f]colorWithAlphaComponent:1.0f];
+        
+        controll++;
+        
+    }
+    else if (controll == 2){
+        
+        _tagColor = [[UIColor colorWithRed:134.0f/255.0f green:161.0f/255.0f blue:169.0f/255.0f alpha:0.5f/255.0f]colorWithAlphaComponent:1.0f];
+        
+        controll++;
+        
+    }
+    else if (controll == 3){
+        
+        _tagColor = [[UIColor colorWithRed:171.0f/255.0f green:152.0f/255.0f blue:149.0f/255.0f alpha:0.5f/255.0f]colorWithAlphaComponent:1.0f];
+        
+        controll++;
+        
+    }
+    else if (controll == 4){
+        
+        _tagColor = [[UIColor colorWithRed:200.0f/255.0f green:178.0f/255.0f blue:115.0f/255.0f alpha:0.5f/255.0f]colorWithAlphaComponent:1.0f];
+        
+        controll = 0;
+        
+    }
+    
     [self setNeedsDisplay];
 }
+
 
 - (void)setInnerTagColor:(UIColor *)innerTagColor {
     _innerTagColor = innerTagColor;
