@@ -47,7 +47,7 @@ int controll = 0;
     [[self appearance] setTextColor:kDefaultTextColor];
     [[self appearance] setTagColor:kDefaultTagColor];
     [[self appearance] setInnerTagColor:kDefaultInnerTagColor];
-    [[self appearance] setAccessoryImage:nil];
+    [[self appearance] setAccessoryImage:[UIImage imageNamed:@"tag_remove_icon"]];
     [[self appearance] setImagePadding:kDefaultImagePadding];
 }
 
